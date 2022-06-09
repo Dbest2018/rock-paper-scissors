@@ -7,7 +7,7 @@
 :root{
     --clr-text: white;
     --clr-off-white: rgba(255, 255, 255, .5); 
-    --fs-sm: 2.5rem;
+    --fs-sm: 1.5rem;
     --fs-md: 5rem;
     --fs-lg: 10rem;
 }
@@ -61,7 +61,7 @@ body{
     display: flex;
     justify-content: space-between;
     width: 60vw;
-    font-size: 8vmin;
+    font-size: 5vmin;
     margin: 2rem 0;
     text-align: center;
 }
@@ -74,12 +74,25 @@ body{
     display: flex;
     justify-content: space-between;
     width: 45vw;
-    padding: 7rem 0;
+    padding: 5rem 0;
+}
+.message{
+    display: flex;
+    align-items: flex-end;
+    font-size: var(--fs-sm);
+}
+
+.choice{
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+.choice:hover{
+    transform: scale(2);
 }
 
 .game__scissors-container{
     width: 45vw;
-    padding: 3rem 0;
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: flex-end;
