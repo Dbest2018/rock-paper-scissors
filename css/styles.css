@@ -4,9 +4,83 @@
     box-sizing: border-box;
 }
 
+:root{
+    --clr-text: white;
+    --clr-off-white: rgba(255, 255, 255, .5); 
+    --fs-sm: 2.5rem;
+    --fs-md: 5rem;
+    --fs-lg: 10rem;
+}
+
 body{
     background-image: url(../images/rps-background.webp);
+    font-family: "Roboto", sans-serif;
+    color: var(--clr-text);
+}
+
+/*-- Home --*/
+.home{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.disappear{
+    display: none;
+}
+.home__title{
+    font-size: var(--fs-md);
+    color: var(--clr-off-white);
+}
+
+.home__play-btn{
+    font-size: var(--fs-lg);
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+.home__play-btn:hover{
+    color: var(--clr-off-white);
+    transform: scale(1.1);
+}
+
+/*-- Game --*/
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game__title{
+    font-size: var(--fs-sm);
+}
+
+.game__score{
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    font-size: 8vmin;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.game__text{
+    font-size: var(--fs-sm);
+}
+
+.game__rp-container{
+    display: flex;
+    justify-content: space-between;
+    width: 45vw;
+    padding: 7rem 0;
+}
+
+.game__scissors-container{
+    width: 45vw;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
