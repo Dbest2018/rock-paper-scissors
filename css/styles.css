@@ -70,18 +70,32 @@ body{
 .game__rp-container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 45vw;
-    padding: 5rem 0;
+    height: 15rem;
+    /* border: 1px solid black; */
 }
 
 .message-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
+    text-align: center;
 }
+
 .message{
     font-size: var(--fs-sm);
+}
+
+.game-restart{
+    font-family: "Roboto", sans-serif;
+    font-size: var(--fs-sm);
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, .1);
+    transition: all .2s ease-in-out;
+}
+.game-restart:hover{
+    transform: scale(1.1);
 }
 
 .choice{

@@ -6,6 +6,8 @@ const game = document.querySelector(".game");
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
+const playButton = document.querySelector(".home__play-btn");
+const restartButton = document.querySelector(".game-restart");
 
 // Game display text
 const centralMessage = document.querySelector(".message");
@@ -13,7 +15,6 @@ const computerMessage = document.querySelector(".message-computer");
 const playerScoreText = document.querySelector(".score-player");
 const computerScoreText = document.querySelector(".score-computer");
 
-const playButton = document.querySelector(".home__play-btn");
 let playerScore = 0;
 let computerScore = 0;
 
@@ -72,19 +73,42 @@ const runGame = (playerMove) => {
         if(playerScore === 5){
             computerMessage.textContent = "";
             centralMessage.textContent = "CONGRATULATIONS!! YOU WON";
+            restartButton.classList.remove("disappear");
         }
         else{
             computerMessage.textContent = "";
-            centralMessage.textContent = "Game Over, YOU LOST";
+            centralMessage.textContent = "Game Over YOU LOST";
+            restartButton.classList.remove("disappear");
         }
     }
 }
 
-playButton.addEventListener("click",(e) => {
+const startGame = () => {
     document.body.style.backgroundImage = "url('./images/rps-5.webp')";
     home.classList.add("disappear");
     game.classList.remove("disappear");
-    console.log("play button clicked");
+    restartButton.classList.add("disappear");
+}
+
+const restartGame = () => {
+    // set background to home background
+    // return to home page
+    // player score, computer score to 0
+    // set computer text to null
+    // set message to null
+    document.body.style.backgroundImage = "url('./images/rps-background.webp')";
+    home.classList.remove("disappear");
+    game.classList.add("disappear");
+    playerScore = 0;
+    computerScore = 0;
+    computerMessage.textContent = "";
+    centralMessage.textContent = "";
+    computerScoreText.textContent = "Computer: 0";
+    playerScoreText.textContent = "Player: 0";
+}
+
+playButton.addEventListener("click",(e) => {
+    startGame();
 })
 
 rock.addEventListener("click", () => {
@@ -98,3 +122,7 @@ paper.addEventListener("click", () => {
 scissors.addEventListener("click", () => {
    runGame("scissors");
 });
+
+restartButton.addEventListener("click", () => {
+    restartGame();
+})
