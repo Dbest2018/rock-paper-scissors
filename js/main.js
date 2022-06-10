@@ -61,7 +61,7 @@ const gamePlay = (playerSelection, computerSelection) => {
 }
 
 const runGame = (playerMove) => {
-    if(playerScore < 5 && computerScore < 5){
+    if(playerScore <= 4 && computerScore <= 4){
         const computerMove = computerPlay()
         const gameResult = gamePlay(playerMove, computerMove);
         computerMessage.textContent = `Computer Plays: ${computerMove}`
@@ -69,18 +69,17 @@ const runGame = (playerMove) => {
         playerScoreText.textContent = `Player: ${playerScore}`
         computerScoreText.textContent = `Computer: ${computerScore}`;
     }
-    else{
-        if(playerScore === 5){
+    if(playerScore === 5){
             computerMessage.textContent = "";
             centralMessage.textContent = "CONGRATULATIONS!! YOU WON";
             restartButton.classList.remove("disappear");
-        }
-        else{
+            return;
+    }
+    if(computerScore === 5){
             computerMessage.textContent = "";
             centralMessage.textContent = "Game Over YOU LOST";
             restartButton.classList.remove("disappear");
-        }
-    }
+    }  
 }
 
 const startGame = () => {
