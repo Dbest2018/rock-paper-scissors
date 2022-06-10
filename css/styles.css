@@ -73,9 +73,14 @@ body{
     width: 45vw;
     padding: 5rem 0;
 }
-.message{
+
+.message-container{
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+.message{
     font-size: var(--fs-sm);
 }
 
