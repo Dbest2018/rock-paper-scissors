@@ -7,7 +7,7 @@ Run on local machine:
 
 ## Live Site
 
-- [Rock Paper Scissors](https://dam-tenzies.netlify.app/)
+- [Rock Paper Scissors](https://dbest2018.github.io/rock-paper-scissors/)
 
 ## Screenshot
 
