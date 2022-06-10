@@ -6,7 +6,7 @@
 
 :root{
     --clr-text: white;
-    --clr-off-white: rgba(255, 255, 255, .5); 
+    --dark-blue: #06283D; 
     --fs-sm: 1.5rem;
     --fs-md: 5rem;
     --fs-lg: 10rem;
@@ -28,17 +28,18 @@ body{
 
 .home__title{
     font-size: var(--fs-md);
-    color: var(--clr-off-white);
+    color: var(--dark-blue);
 }
 
 .home__play-btn{
     font-size: var(--fs-lg);
+    color: var(--dark-blue);
     transition: all .2s ease-in-out;
     cursor: pointer;
 }
 
 .home__play-btn:hover{
-    color: var(--clr-off-white);
+    color: var(--clr-text);
     transform: scale(1.1);
 }
 
