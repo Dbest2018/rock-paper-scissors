@@ -26,9 +26,6 @@ body{
     align-items: center;
 }
 
-.disappear{
-    display: none;
-}
 .home__title{
     font-size: var(--fs-md);
     color: var(--clr-off-white);
@@ -96,4 +93,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: flex-end;
+}
+
+.disappear{
+    display: none;
 }
